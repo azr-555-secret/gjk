@@ -2,13 +2,13 @@
 date_default_timezone_set('Asia/Jakarta');
 include "func.php";
 
-echo color("green","================="); echo color("nevy","[ AUTO CREATE ACCOUNT ]"); echo color("green","================")."\n";
-echo color("green","================="); echo color("nevy","[ AUTO CLAIM VOUCHERS ]"); echo color("green","================")."\n";
-echo color("green","===================="); echo color("nevy","[ AUTO SET PIN ]"); echo color("green","====================")."\n";
+echo color("green","* * * * *"); echo color("nevy","[ AUTO CREATE ACCOUNT ]"); echo color("green","* * * * *")."\n";
+echo color("green","* * * * *"); echo color("nevy","[ AUTO CLAIM VOUCHERS ]"); echo color("green","* * * * *")."\n";
+echo color("green","* * * * * * *"); echo color("nevy","[ AUTO SET PIN ]"); echo color("green","* * * * * *")."\n";
 echo color("nevy"," Created by : Vino AZR")."\n";
 echo color("nevy"," Version    : 555")."\n";
 echo color("nevy"," Time       : ".date('[d-m-Y] [H:i:s]'))."\n";
-echo color("purple","=================[ AUTO CREATE ACCOUNT ]================")."\n";
+echo color("purple","* * * * *[ AUTO CREATE ACCOUNT ]* * * * *")."\n";
 
 //function change(){
 	$nama = nama();
@@ -52,10 +52,10 @@ echo color("purple","=================[ AUTO CREATE ACCOUNT ]================").
 			echo "\n".color("yellow","+] Your access token : ".$token."\n");
 			save("token.txt",$token);
 				
-			echo color("purple","=================[ AUTO CLAIM VOUCHERS ]================");
+			echo color("purple","* * * * *[ AUTO CLAIM VOUCHERS ]* * * * *");
 			echo "\n".color("yellow","!] Claim Voc Go Food");
-			echo "\n".color("yellow","!] Please wait...");
-			for($a=1;$a<=3;$a++) {
+			echo "\n".color("yellow","!] Please wait");
+			for($a=1;$a<=5;$a++) {
 				echo color("yellow",".");
 				sleep(15);
 			}
@@ -104,7 +104,7 @@ echo color("purple","=================[ AUTO CREATE ACCOUNT ]================").
 			
 			setpin:
 			echo "\n";
-			echo color("purple","=====================[ AUTO SET PIN ]===================")."\n";
+			echo color("purple","* * * * *[ AUTO SET PIN ]* * * * *")."\n";
 			$data2 = '{"pin":"222555"}';
 			$getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
 			echo color("nevy","?] OTP PIN : ");
@@ -112,7 +112,7 @@ echo color("purple","=================[ AUTO CREATE ACCOUNT ]================").
 			$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
 			echo $verifotpsetpin ."\n";
 			echo color("green","+] Your PIN is Activated")."\n";
-			echo color("green","========================"); echo color("nevy","[ DONE ]"); echo color("green","========================")."\n";
+			echo color("green","* * * * *"); echo color("nevy","[ DONE ]"); echo color("green","* * * * *")."\n";
 		} else {
 			echo color("red","x] Seems like the code isn't valid!!! \n");
 			echo color("yellow","!] Please input again \n");
