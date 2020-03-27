@@ -10,7 +10,7 @@ Follow this steps :
 
 4. pkg install git
 
-5. git clone https://github.com/azr555secret/gjk
+5. git clone https://github.com/azr-555-secret/gjk
 
 6. cd gjk
 
