@@ -119,8 +119,8 @@ echo color("green","     * * * * * * * * * * * * * * * * * * * * * * ")."\n";
 			$otpsetpin = trim(fgets(STDIN));
 			$verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
 			echo $verifotpsetpin ."\n";
-			echo color("green","+] Your PIN is Activated")."\n";
-			echo color("green","     * * * * * * * * * * * * * * * * * * * * * * ")."\n\n";
+			echo color("green","+] Your PIN is Activated")."\n\n";
+			echo color("green","     * * * * * * * * * * * * * * * * * * * * * * ")."\n";
 			echo color("green","     *                   "); echo color("purple","DONE"); echo color("green","                  * ")."\n";
 			echo color("green","     * * * * * * * * * * * * * * * * * * * * * * ")."\n";
 		} else {
