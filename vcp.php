@@ -64,13 +64,13 @@ echo color("green","     * * * * * * * * * * * * * * * * * * * * * * ")."\n";
 			echo color("yellow","!] Please wait");
 			for($a=1;$a<=5;$a++) {
 				echo color("yellow",".");
-				sleep(3);
+				sleep(2);
 			}
 			sleep(3);
 			$gocar = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD090320A"}');
 			$message = fetch_value($gocar,'"message":"','"');
 			echo "\n".color("green","+] Message: ".$message);
-			sleep(3);
+			sleep(1);
 				
 			$cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
 			$total = fetch_value($cekvoucher,'"total_vouchers":',',');
