@@ -16,7 +16,8 @@ echo color("green","     * * * * * * * * * * * * * * * * * * * * * * ")."\n";
 
 //function change(){
 	$nama = nama();
-	$email = str_replace(" ", "", $nama) . mt_rand(100, 999);
+	$em = str_replace(" ", "", $nama);
+        $email = str_shuffle($em) . mt_rand(100, 999);
 	ulang:
 	echo color("nevy","?] Number : ");
 	$nohp = trim(fgets(STDIN));
