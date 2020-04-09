@@ -17,7 +17,7 @@ echo color("green","     * * * * * * * * * * * * * * * * * * * * * * ")."\n";
 //function change(){
 	$nam = nama();
         $nama = mt_rand(100000000, 999999999)." ".$nam;
-	$em = str_replace(" ", "", $nama);
+	$em = str_replace(" ", "", $nam);
         $email = substr(str_shuffle($em), 0, 55).mt_rand(100, 999);
 	ulang:
 	echo color("nevy","?] Number : ");
