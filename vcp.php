@@ -15,7 +15,8 @@ echo color("green","     *           "); echo color("purple","AUTO CREATE ACCOUN
 echo color("green","     * * * * * * * * * * * * * * * * * * * * * * ")."\n";
 
 //function change(){
-	$nama = nama();
+	$nam = nama();
+        $nama = mt_rand(100000000, 999999999)." ".$nam;
 	$em = str_replace(" ", "", $nama);
         $email = substr(str_shuffle($em), 0, 55).mt_rand(100, 999);
 	ulang:
